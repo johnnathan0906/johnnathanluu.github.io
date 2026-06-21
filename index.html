@@ -1,178 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Johnnathan Luu — Bio</title>
-  <style>
-    :root {
-      --primary: #1f2937;
-      --accent: #3b82f6;
-      --light: #f9fafb;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-    body {
-      background: var(--light);
-      color: var(--primary);
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    header {
-      background: var(--primary);
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: .25rem;
-    }
-    header p {
-      font-size: 1.1rem;
-      opacity: .9;
-    }
-    main {
-      flex: 1;
-      width: 90%;
-      max-width: 900px;
-      margin: 2rem auto;
-    }
-    section {
-      margin-bottom: 2.5rem;
-    }
-    h2 {
-      margin-bottom: 1rem;
-      color: var(--accent);
-      font-size: 1.6rem;
-      border-bottom: 2px solid var(--accent);
-      display: inline-block;
-      padding-bottom: .25rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: white;
-      padding: 1.25rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,.05);
-    }
-    ul {
-      list-style: disc inside;
-      margin-left: .5rem;
-    }
-    footer {
-      background: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: .9rem;
-    }
-    a {
-      color: var(--accent);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Johnnathan Luu | Remote Technical Support Specialist</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+background:#0a0a0a;
+color:#f5f5f5;
+line-height:1.7;
+}
+
+.container{
+max-width:900px;
+margin:0 auto;
+padding:80px 24px;
+}
+
+.hero{
+padding:120px 0 80px;
+}
+
+.hero h1{
+font-size:4rem;
+font-weight:700;
+margin-bottom:16px;
+}
+
+.hero h2{
+font-size:1.4rem;
+font-weight:500;
+color:#9ca3af;
+margin-bottom:24px;
+}
+
+.tagline{
+font-size:1.4rem;
+max-width:700px;
+color:#ffffff;
+}
+
+.section{
+margin-top:100px;
+}
+
+.section-title{
+font-size:2rem;
+margin-bottom:30px;
+font-weight:600;
+}
+
+.about{
+font-size:1.1rem;
+color:#d1d5db;
+}
+
+.impact-card{
+background:#111111;
+border:1px solid #1f2937;
+border-radius:16px;
+padding:28px;
+margin-bottom:24px;
+}
+
+.impact-card h3{
+margin-bottom:12px;
+font-size:1.2rem;
+}
+
+.impact-card p{
+color:#d1d5db;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111111;
+border:1px solid #1f2937;
+padding:24px;
+border-radius:16px;
+}
+
+.card h3{
+margin-bottom:12px;
+}
+
+.card ul{
+padding-left:18px;
+}
+
+.card li{
+margin-bottom:8px;
+color:#d1d5db;
+}
+
+.experience{
+background:#111111;
+border:1px solid #1f2937;
+padding:28px;
+border-radius:16px;
+margin-bottom:20px;
+}
+
+.experience h3{
+margin-bottom:8px;
+}
+
+.experience p{
+color:#9ca3af;
+margin-bottom:12px;
+}
+
+.contact a{
+color:white;
+text-decoration:none;
+display:block;
+margin-bottom:12px;
+}
+
+.contact a:hover{
+opacity:.7;
+}
+
+footer{
+padding:60px 0;
+text-align:center;
+color:#6b7280;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.7rem;
+}
+
+.tagline{
+font-size:1.1rem;
+}
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>Johnnathan Luu</h1>
-    <p>Trilingual Tech‑Support & Language Specialist · English • Vietnamese • Korean</p>
-  </header>
 
-  <main>
-    <!-- About -->
-    <section>
-      <h2>About Me</h2>
-      <p style="margin-top:.75rem;">
-        I’m a Computer Information Systems graduate with professional roots in U.S. healthcare tech‑support,
-        multilingual customer service, and freelance translation. After years in New York, I relocated to Asia to align my career with my
-        core values: purposeful work, cross‑cultural connection, and growth. Fluent in three languages and calm under pressure, I turn complex
-        problems into clear, human‑centered solutions.
-      </p>
-    </section>
+<div class="container">
 
-    <!-- Skills -->
-    <section>
-      <h2>Core Skills</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Technical Support</h3>
-          <ul>
-            <li>Diagnostics & troubleshooting (Windows, Mac, SaaS)</li>
-            <li>Ticketing & knowledge‑base creation</li>
-            <li>Customer escalation handling</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Language & Communication</h3>
-          <ul>
-            <li>English C2 (near‑native)</li>
-            <li>Vietnamese — native</li>
-            <li>Korean — fluent</li>
-            <li>EN‑VI‑KR translation & localization</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Education & Training</h3>
-          <ul>
-            <li>120‑hr TEFL certified</li>
-            <li>Adaptive lesson design</li>
-            <li>Cross‑cultural classroom management</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<section class="hero">
 
-    <!-- Experience -->
-    <section>
-      <h2>Selected Experience</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Performance Support Specialist – Healthfirst, New York</h3>
-          <p><em>2024 – 2025</em></p>
-          <ul>
-            <li>Resolved escalated member & provider tech issues with 95% first‑call resolution.</li>
-            <li>Translated policy updates into Korean & Vietnamese to ensure clear statewide compliance.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Freelance Translator & Tutor</h3>
-          <p><em>2018 – Present</em></p>
-          <ul>
-            <li>Translated business, medical, and legal documents (EN‑VI‑KR).</li>
-            <li>Tutored 50+ students online; designed customized IELTS & conversation courses.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<h1>Johnnathan Luu</h1>
 
-    <!-- Education -->
-    <section>
-      <h2>Education</h2>
-      <div class="card" style="margin-top:1rem;">
-        <p><strong>Associate of Science in Computer Information Systems</strong><br>Bunker Hill Community College — Boston, MA</p>
-      </div>
-    </section>
+<h2>Remote Technical Support Specialist</h2>
 
-    <!-- Contact -->
-    <section>
-      <h2>Contact</h2>
-      <p style="margin-top:.75rem;">Email: <a href="mailto:johnnathan@example.com">johnnathan@example.com</a> · Phone/WhatsApp: +84 (0)123 456 789</p>
-      <p style="margin-top:.5rem;">LinkedIn: <a href="https://linkedin.com/in/johnnathanluu" target="_blank">linkedin.com/in/johnnathanluu</a></p>
-    </section>
-  </main>
+<p class="tagline">
+I investigate problems, improve workflows, and create systems that help teams succeed.
+</p>
 
-  <footer>
-    <p>© 2025 Johnnathan Luu · Crafted with care</p>
-  </footer>
+</section>
+
+<section class="section">
+
+<h2 class="section-title">About</h2>
+
+<p class="about">
+Remote Technical Support Specialist with experience troubleshooting complex issues, improving support processes, and creating documentation that helps teams work more efficiently.
+
+Known for identifying root causes, solving challenging problems, and supporting colleagues through clear communication and knowledge sharing.
+
+Fluent in English, Korean, and Vietnamese, with a strong focus on accuracy, continuous improvement, and independent problem solving.
+</p>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Selected Impact</h2>
+
+<div class="impact-card">
+<h3>Resolved Claims Visibility System Issue</h3>
+
+<p>
+Identified a discrepancy between customer-facing and internal claim data, partnered with IT to investigate the issue, and helped drive resolution. The fix improved claim visibility and reduced unnecessary complaints.
+</p>
+</div>
+
+<div class="impact-card">
+<h3>Improved Complaint Workflow Efficiency</h3>
+
+<p>
+Discovered duplicate complaint communications between departments due to unclear workflow ownership. Helped identify the gap and contributed to a more efficient process with less redundant work.
+</p>
+</div>
+
+<div class="impact-card">
+<h3>Built Internal Documentation for Legacy Systems</h3>
+
+<p>
+Created step-by-step guides for manually updating provider information in legacy systems and regularly assisted teammates with complex processes, improving consistency and knowledge sharing.
+</p>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Core Strengths</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Issue Investigation</h3>
+<ul>
+<li>Root cause analysis</li>
+<li>Technical troubleshooting</li>
+<li>Problem resolution</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Process Improvement</h3>
+<ul>
+<li>Workflow optimization</li>
+<li>Operational efficiency</li>
+<li>Continuous improvement</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Documentation</h3>
+<ul>
+<li>Job aids</li>
+<li>Knowledge base creation</li>
+<li>Process documentation</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Knowledge Sharing</h3>
+<ul>
+<li>Peer support</li>
+<li>Team collaboration</li>
+<li>Training assistance</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Experience</h2>
+
+<div class="experience">
+
+<h3>Performance Support Specialist</h3>
+
+<p>Healthfirst • Remote</p>
+
+<ul>
+<li>Troubleshot complex billing, eligibility, provider, and portal-related issues</li>
+<li>Collaborated with cross-functional teams to resolve escalated cases</li>
+<li>Created documentation and job aids to improve team effectiveness</li>
+<li>Supported audit and compliance initiatives</li>
+
+</ul>
+
+</div>
+
+<div class="experience">
+
+<h3>Bilingual Field Service Agent</h3>
+
+<p>Healthfirst</p>
+
+<ul>
+<li>Provided multilingual support in English, Korean, and Vietnamese</li>
+<li>Assisted members with eligibility, enrollment, and benefits issues</li>
+<li>Resolved complex member concerns through investigation and coordination</li>
+</ul>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Tools & Technologies</h2>
+
+<div class="grid">
+
+<div class="card">
+<ul>
+<li>Salesforce</li>
+<li>Citrix</li>
+<li>Workday</li>
+<li>Microsoft Office</li>
+</ul>
+</div>
+
+<div class="card">
+<ul>
+<li>Google Workspace</li>
+<li>Windows</li>
+<li>macOS</li>
+<li>Ticketing Systems</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Languages</h2>
+
+<p class="about">
+English • Korean • Vietnamese
+</p>
+
+</section>
+
+<section class="section contact">
+
+<h2 class="section-title">Connect</h2>
+
+<a href="https://www.linkedin.com/in/johnnathanluu" target="_blank">
+LinkedIn
+</a>
+
+<a href="mailto:your@email.com">
+Email
+</a>
+
+</section>
+
+<footer>
+
+© 2026 Johnnathan Luu
+
+</footer>
+
+</div>
+
 </body>
 </html>
