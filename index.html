@@ -3,115 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Johnnathan Luu | Remote Technical Support Specialist</title>
 
 <style>
+
+:root{
+--bg:#0a0a0a;
+--card:#111111;
+--border:#222222;
+--text:#f5f5f5;
+--muted:#9ca3af;
+--accent:#ffffff;
+}
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
+background:var(--bg);
+color:var(--text);
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-background:#0a0a0a;
-color:#f5f5f5;
 line-height:1.7;
 }
 
 .container{
-max-width:900px;
-margin:0 auto;
-padding:80px 24px;
+max-width:1100px;
+margin:auto;
+padding:40px 24px;
 }
 
 .hero{
-padding:120px 0 80px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+min-height:85vh;
+}
+
+.hero-content{
+flex:1;
 }
 
 .hero h1{
 font-size:4rem;
+line-height:1;
+margin-bottom:18px;
 font-weight:700;
-margin-bottom:16px;
 }
 
 .hero h2{
-font-size:1.4rem;
+font-size:1.3rem;
 font-weight:500;
-color:#9ca3af;
+color:var(--muted);
 margin-bottom:24px;
 }
 
 .tagline{
-font-size:1.4rem;
-max-width:700px;
-color:#ffffff;
+font-size:1.5rem;
+max-width:650px;
+margin-bottom:18px;
 }
 
-.section{
-margin-top:100px;
+.quote{
+color:var(--muted);
+font-style:italic;
+margin-bottom:30px;
+}
+
+.hero-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.hero-buttons a{
+text-decoration:none;
+color:white;
+padding:12px 20px;
+border:1px solid var(--border);
+border-radius:999px;
+transition:.2s;
+}
+
+.hero-buttons a:hover{
+background:white;
+color:black;
+}
+
+.profile-image{
+width:360px;
+max-width:100%;
+}
+
+section{
+margin-top:120px;
 }
 
 .section-title{
 font-size:2rem;
-margin-bottom:30px;
-font-weight:600;
+margin-bottom:32px;
 }
 
 .about{
 font-size:1.1rem;
+max-width:800px;
 color:#d1d5db;
 }
 
-.impact-card{
-background:#111111;
-border:1px solid #1f2937;
-border-radius:16px;
-padding:28px;
-margin-bottom:24px;
-}
-
-.impact-card h3{
-margin-bottom:12px;
-font-size:1.2rem;
-}
-
-.impact-card p{
-color:#d1d5db;
-}
-
-.grid{
+.impact{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
 .card{
-background:#111111;
-border:1px solid #1f2937;
-padding:24px;
-border-radius:16px;
+background:var(--card);
+border:1px solid var(--border);
+padding:28px;
+border-radius:18px;
 }
 
 .card h3{
 margin-bottom:12px;
 }
 
-.card ul{
-padding-left:18px;
-}
-
-.card li{
-margin-bottom:8px;
+.card p{
 color:#d1d5db;
 }
 
+.work-style{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+}
+
+.work-style ul{
+padding-left:20px;
+}
+
+.work-style li{
+margin-bottom:12px;
+}
+
 .experience{
-background:#111111;
-border:1px solid #1f2937;
+background:var(--card);
+border:1px solid var(--border);
 padding:28px;
-border-radius:16px;
-margin-bottom:20px;
+border-radius:18px;
 }
 
 .experience h3{
@@ -119,37 +164,62 @@ margin-bottom:8px;
 }
 
 .experience p{
-color:#9ca3af;
-margin-bottom:12px;
+color:var(--muted);
+margin-bottom:16px;
 }
 
-.contact a{
-color:white;
+.experience ul{
+padding-left:20px;
+}
+
+.experience li{
+margin-bottom:8px;
+}
+
+.footer{
+margin-top:120px;
+padding-top:40px;
+border-top:1px solid var(--border);
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.footer a{
+color:var(--muted);
 text-decoration:none;
-display:block;
-margin-bottom:12px;
 }
 
-.contact a:hover{
-opacity:.7;
+.footer a:hover{
+color:white;
 }
 
-footer{
-padding:60px 0;
+@media(max-width:900px){
+
+.hero{
+flex-direction:column-reverse;
 text-align:center;
-color:#6b7280;
+min-height:auto;
+padding-top:40px;
 }
-
-@media(max-width:768px){
 
 .hero h1{
-font-size:2.7rem;
+font-size:3rem;
 }
 
 .tagline{
-font-size:1.1rem;
+font-size:1.2rem;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.work-style{
+grid-template-columns:1fr;
 }
 }
+
 </style>
 </head>
 
@@ -159,107 +229,117 @@ font-size:1.1rem;
 
 <section class="hero">
 
+<div class="hero-content">
+
 <h1>Johnnathan Luu</h1>
 
 <h2>Remote Technical Support Specialist</h2>
 
 <p class="tagline">
-I investigate problems, improve workflows, and create systems that help teams succeed.
+I investigate problems, improve workflows, and help teams work more effectively.
 </p>
+
+<p class="quote">
+"I enjoy finding the issue behind the issue."
+</p>
+
+<div class="hero-buttons">
+<a href="mailto:johnnathan0906@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/johnnathanluu" target="_blank">LinkedIn</a>
+<a href="Resume.pdf" target="_blank">Resume</a>
+<a href="https://github.com/johnnathan0906" target="_blank">GitHub</a>
+</div>
+
+</div>
+
+<img src="Profile1.png" alt="Johnnathan Luu" class="profile-image">
 
 </section>
 
-<section class="section">
+<section>
 
 <h2 class="section-title">About</h2>
 
 <p class="about">
 Remote Technical Support Specialist with experience troubleshooting complex issues, improving support processes, and creating documentation that helps teams work more efficiently.
 
-Known for identifying root causes, solving challenging problems, and supporting colleagues through clear communication and knowledge sharing.
+Known for identifying root causes, solving challenging problems, and supporting colleagues through knowledge sharing and process improvement.
 
 Fluent in English, Korean, and Vietnamese, with a strong focus on accuracy, continuous improvement, and independent problem solving.
 </p>
 
 </section>
 
-<section class="section">
+<section>
 
 <h2 class="section-title">Selected Impact</h2>
 
-<div class="impact-card">
-<h3>Resolved Claims Visibility System Issue</h3>
+<div class="impact">
 
+<div class="card">
+<h3>Resolved Claims Visibility System Issue</h3>
 <p>
 Identified a discrepancy between customer-facing and internal claim data, partnered with IT to investigate the issue, and helped drive resolution. The fix improved claim visibility and reduced unnecessary complaints.
 </p>
 </div>
 
-<div class="impact-card">
+<div class="card">
 <h3>Improved Complaint Workflow Efficiency</h3>
-
 <p>
 Discovered duplicate complaint communications between departments due to unclear workflow ownership. Helped identify the gap and contributed to a more efficient process with less redundant work.
 </p>
 </div>
 
-<div class="impact-card">
+<div class="card">
 <h3>Built Internal Documentation for Legacy Systems</h3>
-
 <p>
 Created step-by-step guides for manually updating provider information in legacy systems and regularly assisted teammates with complex processes, improving consistency and knowledge sharing.
 </p>
 </div>
 
+</div>
+
 </section>
 
-<section class="section">
+<section>
 
-<h2 class="section-title">Core Strengths</h2>
+<h2 class="section-title">How I Work</h2>
 
-<div class="grid">
+<div class="work-style">
 
 <div class="card">
-<h3>Issue Investigation</h3>
+
+<h3>I do my best work when:</h3>
+
 <ul>
-<li>Root cause analysis</li>
-<li>Technical troubleshooting</li>
-<li>Problem resolution</li>
+<li>Investigating complex issues</li>
+<li>Identifying root causes</li>
+<li>Improving workflows</li>
+<li>Creating documentation</li>
+<li>Helping teammates solve problems</li>
 </ul>
+
 </div>
 
 <div class="card">
-<h3>Process Improvement</h3>
+
+<h3>I prefer:</h3>
+
 <ul>
-<li>Workflow optimization</li>
-<li>Operational efficiency</li>
+<li>Async communication</li>
+<li>Independent work</li>
+<li>Clear processes</li>
 <li>Continuous improvement</li>
+<li>Thoughtful problem solving</li>
 </ul>
-</div>
 
-<div class="card">
-<h3>Documentation</h3>
-<ul>
-<li>Job aids</li>
-<li>Knowledge base creation</li>
-<li>Process documentation</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Knowledge Sharing</h3>
-<ul>
-<li>Peer support</li>
-<li>Team collaboration</li>
-<li>Training assistance</li>
-</ul>
 </div>
 
 </div>
 
 </section>
 
-<section class="section">
+<section>
 
 <h2 class="section-title">Experience</h2>
 
@@ -274,84 +354,19 @@ Created step-by-step guides for manually updating provider information in legacy
 <li>Collaborated with cross-functional teams to resolve escalated cases</li>
 <li>Created documentation and job aids to improve team effectiveness</li>
 <li>Supported audit and compliance initiatives</li>
-
-</ul>
-
-</div>
-
-<div class="experience">
-
-<h3>Bilingual Field Service Agent</h3>
-
-<p>Healthfirst</p>
-
-<ul>
-<li>Provided multilingual support in English, Korean, and Vietnamese</li>
-<li>Assisted members with eligibility, enrollment, and benefits issues</li>
-<li>Resolved complex member concerns through investigation and coordination</li>
 </ul>
 
 </div>
 
 </section>
 
-<section class="section">
+<div class="footer">
 
-<h2 class="section-title">Tools & Technologies</h2>
-
-<div class="grid">
-
-<div class="card">
-<ul>
-<li>Salesforce</li>
-<li>Citrix</li>
-<li>Workday</li>
-<li>Microsoft Office</li>
-</ul>
-</div>
-
-<div class="card">
-<ul>
-<li>Google Workspace</li>
-<li>Windows</li>
-<li>macOS</li>
-<li>Ticketing Systems</li>
-</ul>
-</div>
+<a href="mailto:johnnathan0906@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/johnnathanluu" target="_blank">LinkedIn</a>
+<a href="https://github.com/johnnathan0906" target="_blank">GitHub</a>
 
 </div>
-
-</section>
-
-<section class="section">
-
-<h2 class="section-title">Languages</h2>
-
-<p class="about">
-English • Korean • Vietnamese
-</p>
-
-</section>
-
-<section class="section contact">
-
-<h2 class="section-title">Connect</h2>
-
-<a href="https://www.linkedin.com/in/johnnathanluu" target="_blank">
-LinkedIn
-</a>
-
-<a href="mailto:your@email.com">
-Email
-</a>
-
-</section>
-
-<footer>
-
-© 2026 Johnnathan Luu
-
-</footer>
 
 </div>
 
