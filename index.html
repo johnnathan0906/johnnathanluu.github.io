@@ -9,12 +9,11 @@
 <style>
 
 :root{
---bg:#0a0a0a;
+--bg:#050505;
 --card:#111111;
 --border:#222222;
 --text:#f5f5f5;
---muted:#9ca3af;
---accent:#ffffff;
+--muted:#8f8f8f;
 }
 
 *{
@@ -35,62 +34,74 @@ line-height:1.7;
 }
 
 .container{
-max-width:1100px;
+max-width:1400px;
 margin:auto;
-padding:40px 24px;
+padding:0 60px;
 }
 
 .hero{
+min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:60px;
-min-height:85vh;
+gap:80px;
 }
 
 .hero-content{
 flex:1;
+max-width:700px;
 }
 
 .hero h1{
-font-size:4rem;
-line-height:1;
-margin-bottom:18px;
+font-size:6rem;
+line-height:0.95;
+letter-spacing:-4px;
+margin-bottom:32px;
 font-weight:700;
 }
 
 .hero h2{
-font-size:1.3rem;
+font-size:1.2rem;
 font-weight:500;
 color:var(--muted);
-margin-bottom:24px;
+margin-bottom:14px;
+}
+
+.languages{
+color:var(--muted);
+font-size:1rem;
+margin-bottom:55px;
 }
 
 .tagline{
-font-size:1.5rem;
-max-width:650px;
-margin-bottom:18px;
+font-size:1.4rem;
+line-height:1.8;
+max-width:520px;
+margin-bottom:40px;
 }
 
 .quote{
-color:var(--muted);
+font-size:1.1rem;
 font-style:italic;
-margin-bottom:30px;
+color:var(--muted);
+line-height:1.9;
+margin-bottom:50px;
 }
 
 .hero-buttons{
 display:flex;
+gap:18px;
 flex-wrap:wrap;
-gap:12px;
 }
 
 .hero-buttons a{
 text-decoration:none;
 color:white;
-padding:12px 20px;
-border:1px solid var(--border);
+padding:16px 28px;
+border:1px solid rgba(255,255,255,0.12);
 border-radius:999px;
-transition:.2s;
+transition:.25s;
+font-size:1rem;
 }
 
 .hero-buttons a:hover{
@@ -98,124 +109,120 @@ background:white;
 color:black;
 }
 
+.profile-wrapper{
+flex-shrink:0;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
 .profile-image{
-width:360px;
-max-width:100%;
+width:560px;
+height:560px;
+object-fit:cover;
+border-radius:50%;
+border:2px solid rgba(255,255,255,0.12);
+background:#111;
 }
 
 section{
-margin-top:120px;
+padding:120px 0;
 }
 
 .section-title{
-font-size:2rem;
-margin-bottom:32px;
+font-size:2.4rem;
+margin-bottom:40px;
 }
 
 .about{
-font-size:1.1rem;
+font-size:1.15rem;
 max-width:800px;
-color:#d1d5db;
+color:#d4d4d4;
 }
 
 .impact{
 display:grid;
-gap:20px;
+gap:24px;
 }
 
 .card{
-background:var(--card);
-border:1px solid var(--border);
-padding:28px;
-border-radius:18px;
+background:#0f0f0f;
+border:1px solid rgba(255,255,255,0.08);
+border-radius:24px;
+padding:32px;
 }
 
 .card h3{
-margin-bottom:12px;
+margin-bottom:14px;
+font-size:1.2rem;
 }
 
 .card p{
-color:#d1d5db;
+color:#cfcfcf;
 }
 
-.work-style{
+.work-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:24px;
 }
 
-.work-style ul{
+.work-grid ul{
 padding-left:20px;
 }
 
-.work-style li{
+.work-grid li{
 margin-bottom:12px;
 }
 
-.experience{
-background:var(--card);
-border:1px solid var(--border);
-padding:28px;
-border-radius:18px;
-}
-
-.experience h3{
-margin-bottom:8px;
-}
-
-.experience p{
-color:var(--muted);
-margin-bottom:16px;
-}
-
-.experience ul{
-padding-left:20px;
-}
-
-.experience li{
-margin-bottom:8px;
-}
-
 .footer{
-margin-top:120px;
-padding-top:40px;
-border-top:1px solid var(--border);
+padding:80px 0;
+border-top:1px solid rgba(255,255,255,0.08);
 display:flex;
-gap:20px;
+gap:24px;
 flex-wrap:wrap;
 }
 
 .footer a{
-color:var(--muted);
 text-decoration:none;
+color:var(--muted);
 }
 
 .footer a:hover{
 color:white;
 }
 
-@media(max-width:900px){
+@media(max-width:1100px){
 
 .hero{
 flex-direction:column-reverse;
+justify-content:center;
 text-align:center;
-min-height:auto;
-padding-top:40px;
+padding:100px 0;
+}
+
+.hero-content{
+max-width:100%;
 }
 
 .hero h1{
-font-size:3rem;
+font-size:4rem;
 }
 
 .tagline{
-font-size:1.2rem;
+max-width:100%;
+}
+
+.profile-image{
+width:350px;
+height:350px;
 }
 
 .hero-buttons{
 justify-content:center;
 }
 
-.work-style{
+.work-grid{
 grid-template-columns:1fr;
 }
 }
@@ -235,12 +242,17 @@ grid-template-columns:1fr;
 
 <h2>Remote Technical Support Specialist</h2>
 
+<p class="languages">
+English • Korean • Vietnamese
+</p>
+
 <p class="tagline">
 I investigate problems, improve workflows, and help teams work more effectively.
 </p>
 
 <p class="quote">
-"I enjoy finding the issue behind the issue."
+Finding root causes. Improving processes.<br>
+Helping teams work smarter.
 </p>
 
 <div class="hero-buttons">
@@ -252,7 +264,9 @@ I investigate problems, improve workflows, and help teams work more effectively.
 
 </div>
 
+<div class="profile-wrapper">
 <img src="Profile1.png" alt="Johnnathan Luu" class="profile-image">
+</div>
 
 </section>
 
@@ -279,21 +293,21 @@ Fluent in English, Korean, and Vietnamese, with a strong focus on accuracy, cont
 <div class="card">
 <h3>Resolved Claims Visibility System Issue</h3>
 <p>
-Identified a discrepancy between customer-facing and internal claim data, partnered with IT to investigate the issue, and helped drive resolution. The fix improved claim visibility and reduced unnecessary complaints.
+Identified a discrepancy between customer-facing and internal claim data, partnered with IT to investigate the issue, and helped drive resolution.
 </p>
 </div>
 
 <div class="card">
 <h3>Improved Complaint Workflow Efficiency</h3>
 <p>
-Discovered duplicate complaint communications between departments due to unclear workflow ownership. Helped identify the gap and contributed to a more efficient process with less redundant work.
+Discovered duplicate complaint communications between departments due to unclear workflow ownership and helped identify a more efficient process.
 </p>
 </div>
 
 <div class="card">
 <h3>Built Internal Documentation for Legacy Systems</h3>
 <p>
-Created step-by-step guides for manually updating provider information in legacy systems and regularly assisted teammates with complex processes, improving consistency and knowledge sharing.
+Created step-by-step guides and regularly assisted teammates with complex workflows, improving consistency and knowledge sharing.
 </p>
 </div>
 
@@ -305,7 +319,7 @@ Created step-by-step guides for manually updating provider information in legacy
 
 <h2 class="section-title">How I Work</h2>
 
-<div class="work-style">
+<div class="work-grid">
 
 <div class="card">
 
@@ -326,35 +340,14 @@ Created step-by-step guides for manually updating provider information in legacy
 <h3>I prefer:</h3>
 
 <ul>
-<li>Async communication</li>
 <li>Independent work</li>
+<li>Async communication</li>
 <li>Clear processes</li>
 <li>Continuous improvement</li>
 <li>Thoughtful problem solving</li>
 </ul>
 
 </div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Experience</h2>
-
-<div class="experience">
-
-<h3>Performance Support Specialist</h3>
-
-<p>Healthfirst • Remote</p>
-
-<ul>
-<li>Troubleshot complex billing, eligibility, provider, and portal-related issues</li>
-<li>Collaborated with cross-functional teams to resolve escalated cases</li>
-<li>Created documentation and job aids to improve team effectiveness</li>
-<li>Supported audit and compliance initiatives</li>
-</ul>
 
 </div>
 
