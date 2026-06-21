@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +11,9 @@
 
 :root{
 --bg:#050505;
---card:#111111;
---border:#222222;
 --text:#f5f5f5;
---muted:#8f8f8f;
+--muted:#8a8f98;
+--border:rgba(255,255,255,0.12);
 }
 
 *{
@@ -22,15 +22,12 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
 background:var(--bg);
 color:var(--text);
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-line-height:1.7;
+min-height:100vh;
+overflow-x:hidden;
 }
 
 .container{
@@ -41,22 +38,21 @@ padding:0 60px;
 
 .hero{
 min-height:100vh;
-display:flex;
+display:grid;
+grid-template-columns:1fr 520px;
 align-items:center;
-justify-content:space-between;
 gap:80px;
 }
 
 .hero-content{
-flex:1;
 max-width:700px;
 }
 
 .hero h1{
 font-size:6rem;
-line-height:0.95;
+line-height:.95;
 letter-spacing:-4px;
-margin-bottom:32px;
+margin-bottom:24px;
 font-weight:700;
 }
 
@@ -64,19 +60,19 @@ font-weight:700;
 font-size:1.2rem;
 font-weight:500;
 color:var(--muted);
-margin-bottom:14px;
+margin-bottom:16px;
 }
 
 .languages{
 color:var(--muted);
 font-size:1rem;
-margin-bottom:55px;
+margin-bottom:50px;
 }
 
 .tagline{
-font-size:1.4rem;
+font-size:1.5rem;
 line-height:1.8;
-max-width:520px;
+max-width:560px;
 margin-bottom:40px;
 }
 
@@ -84,24 +80,23 @@ margin-bottom:40px;
 font-size:1.1rem;
 font-style:italic;
 color:var(--muted);
-line-height:1.9;
+line-height:1.8;
 margin-bottom:50px;
 }
 
 .hero-buttons{
 display:flex;
-gap:18px;
 flex-wrap:wrap;
+gap:16px;
 }
 
 .hero-buttons a{
 text-decoration:none;
 color:white;
 padding:16px 28px;
-border:1px solid rgba(255,255,255,0.12);
+border:1px solid var(--border);
 border-radius:999px;
 transition:.25s;
-font-size:1rem;
 }
 
 .hero-buttons a:hover{
@@ -110,107 +105,48 @@ color:black;
 }
 
 .profile-wrapper{
-flex-shrink:0;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.profile-circle{
 width:520px;
 height:520px;
 border-radius:50%;
 background:radial-gradient(
 circle,
-rgba(40,40,40,0.9) 0%,
-rgba(18,18,18,1) 70%,
-rgba(10,10,10,1) 100%
+rgb(35,35,35) 0%,
+rgb(20,20,20) 60%,
+rgb(10,10,10) 100%
 );
-border:2px solid rgba(255,255,255,0.12);
+border:2px solid rgba(255,255,255,0.10);
 display:flex;
 align-items:center;
 justify-content:center;
 overflow:hidden;
 }
 
-section{
-padding:120px 0;
-}
-
-.section-title{
-font-size:2.4rem;
-margin-bottom:40px;
-}
-
-.about{
-font-size:1.15rem;
-max-width:800px;
-color:#d4d4d4;
-}
-
-.impact{
-display:grid;
-gap:24px;
-}
-
-.card{
-background:#0f0f0f;
-border:1px solid rgba(255,255,255,0.08);
-border-radius:24px;
-padding:32px;
-}
-
-.card h3{
-margin-bottom:14px;
-font-size:1.2rem;
-}
-
-.card p{
-color:#cfcfcf;
-}
-
-.work-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:24px;
-}
-
-.work-grid ul{
-padding-left:20px;
-}
-
-.work-grid li{
-margin-bottom:12px;
-}
-
-.footer{
-padding:80px 0;
-border-top:1px solid rgba(255,255,255,0.08);
-display:flex;
-gap:24px;
-flex-wrap:wrap;
-}
-
-.footer a{
-text-decoration:none;
-color:var(--muted);
-}
-
-.footer a:hover{
-color:white;
+.profile-image{
+width:340px;
+height:auto;
+display:block;
 }
 
 @media(max-width:1100px){
 
-.hero{
-flex-direction:column-reverse;
-justify-content:center;
-text-align:center;
-padding:100px 0;
+.container{
+padding:40px 24px;
 }
 
-.hero-content{
-max-width:100%;
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+gap:50px;
+}
+
+.profile-wrapper{
+margin:auto;
+width:360px;
+height:360px;
+}
+
+.profile-image{
+width:250px;
 }
 
 .hero h1{
@@ -221,17 +157,8 @@ font-size:4rem;
 max-width:100%;
 }
 
-.profile-image{
-width:350px;
-height:350px;
-}
-
 .hero-buttons{
 justify-content:center;
-}
-
-.work-grid{
-grid-template-columns:1fr;
 }
 }
 
@@ -264,112 +191,38 @@ Helping teams work smarter.
 </p>
 
 <div class="hero-buttons">
+
 <a href="mailto:johnnathan0906@gmail.com">Email</a>
-<a href="https://www.linkedin.com/in/johnnathanluu" target="_blank">LinkedIn</a>
-<a href="Resume.pdf" target="_blank">Resume</a>
-<a href="https://github.com/johnnathan0906" target="_blank">GitHub</a>
+
+<a href="https://www.linkedin.com/in/johnnathanluu" target="_blank">
+LinkedIn
+</a>
+
+<a href="Resume.pdf" target="_blank">
+Resume
+</a>
+
+<a href="https://github.com/johnnathan0906" target="_blank">
+GitHub
+</a>
+
 </div>
 
 </div>
 
 <div class="profile-wrapper">
-<img src="Profile1.png" alt="Johnnathan Luu" class="profile-image">
-</div>
 
-</section>
-
-<section>
-
-<h2 class="section-title">About</h2>
-
-<p class="about">
-Remote Technical Support Specialist with experience troubleshooting complex issues, improving support processes, and creating documentation that helps teams work more efficiently.
-
-Known for identifying root causes, solving challenging problems, and supporting colleagues through knowledge sharing and process improvement.
-
-Fluent in English, Korean, and Vietnamese, with a strong focus on accuracy, continuous improvement, and independent problem solving.
-</p>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Selected Impact</h2>
-
-<div class="impact">
-
-<div class="card">
-<h3>Resolved Claims Visibility System Issue</h3>
-<p>
-Identified a discrepancy between customer-facing and internal claim data, partnered with IT to investigate the issue, and helped drive resolution.
-</p>
-</div>
-
-<div class="card">
-<h3>Improved Complaint Workflow Efficiency</h3>
-<p>
-Discovered duplicate complaint communications between departments due to unclear workflow ownership and helped identify a more efficient process.
-</p>
-</div>
-
-<div class="card">
-<h3>Built Internal Documentation for Legacy Systems</h3>
-<p>
-Created step-by-step guides and regularly assisted teammates with complex workflows, improving consistency and knowledge sharing.
-</p>
-</div>
+<img
+src="Profile1.png"
+alt="Johnnathan Luu"
+class="profile-image">
 
 </div>
 
 </section>
-
-<section>
-
-<h2 class="section-title">How I Work</h2>
-
-<div class="work-grid">
-
-<div class="card">
-
-<h3>I do my best work when:</h3>
-
-<ul>
-<li>Investigating complex issues</li>
-<li>Identifying root causes</li>
-<li>Improving workflows</li>
-<li>Creating documentation</li>
-<li>Helping teammates solve problems</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>I prefer:</h3>
-
-<ul>
-<li>Independent work</li>
-<li>Async communication</li>
-<li>Clear processes</li>
-<li>Continuous improvement</li>
-<li>Thoughtful problem solving</li>
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<div class="footer">
-
-<a href="mailto:johnnathan0906@gmail.com">Email</a>
-<a href="https://www.linkedin.com/in/johnnathanluu" target="_blank">LinkedIn</a>
-<a href="https://github.com/johnnathan0906" target="_blank">GitHub</a>
-
-</div>
 
 </div>
 
 </body>
 </html>
+```
