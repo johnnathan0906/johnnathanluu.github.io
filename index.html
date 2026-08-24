@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Johnnathan Luu | Remote Technical Support Specialist</title>
+<title>Johnnathan Luu | Bilingual Analyst</title>
 
 <style>
 
@@ -22,6 +22,10 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#050505;
 color:var(--text);
@@ -34,6 +38,8 @@ max-width:1400px;
 margin:auto;
 padding:0 60px;
 }
+
+/* HERO */
 
 .hero{
 min-height:100vh;
@@ -56,7 +62,7 @@ font-weight:700;
 }
 
 .hero h2{
-font-size:1.25rem;
+font-size:1.3rem;
 font-weight:500;
 color:var(--muted);
 margin-bottom:16px;
@@ -65,19 +71,18 @@ margin-bottom:16px;
 .languages{
 color:var(--muted);
 font-size:1rem;
-margin-bottom:50px;
+margin-bottom:48px;
 }
 
 .tagline{
 font-size:1.6rem;
-line-height:1.8;
+line-height:1.7;
 max-width:650px;
-margin-bottom:40px;
+margin-bottom:35px;
 }
 
 .quote{
-font-size:1.15rem;
-font-style:italic;
+font-size:1.1rem;
 color:var(--muted);
 line-height:1.8;
 margin-bottom:50px;
@@ -92,7 +97,7 @@ gap:16px;
 .hero-buttons a{
 text-decoration:none;
 color:white;
-padding:16px 28px;
+padding:15px 27px;
 border:1px solid var(--border);
 border-radius:999px;
 transition:.25s;
@@ -102,6 +107,8 @@ transition:.25s;
 background:white;
 color:black;
 }
+
+/* PROFILE */
 
 .profile-wrapper{
 width:520px;
@@ -121,15 +128,75 @@ object-position:center center;
 display:block;
 }
 
+/* SECTIONS */
+
 .section{
 max-width:1100px;
-margin:120px auto;
+margin:140px auto;
 }
 
 .section-title{
 font-size:2.5rem;
-margin-bottom:50px;
+letter-spacing:-1px;
+margin-bottom:45px;
 }
+
+/* ABOUT */
+
+.about-card{
+background:var(--card);
+border:1px solid var(--border);
+padding:40px;
+border-radius:20px;
+}
+
+.about-card p{
+color:#c0c0c0;
+font-size:1.1rem;
+line-height:1.9;
+max-width:900px;
+}
+
+/* EXPERIENCE */
+
+.experience{
+border-left:1px solid rgba(255,255,255,.15);
+padding-left:35px;
+}
+
+.experience-header{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:30px;
+margin-bottom:20px;
+}
+
+.experience h3{
+font-size:1.5rem;
+margin-bottom:7px;
+}
+
+.company{
+color:#c0c0c0;
+}
+
+.date{
+color:var(--muted);
+white-space:nowrap;
+}
+
+.experience ul{
+padding-left:20px;
+color:#c0c0c0;
+line-height:1.9;
+}
+
+.experience li{
+margin-bottom:12px;
+}
+
+/* IMPACT */
 
 .impact-grid{
 display:grid;
@@ -142,6 +209,12 @@ background:var(--card);
 border:1px solid var(--border);
 padding:30px;
 border-radius:20px;
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-3px);
+border-color:rgba(255,255,255,.2);
 }
 
 .card h3{
@@ -154,11 +227,31 @@ color:#c0c0c0;
 line-height:1.8;
 }
 
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.skill{
+border:1px solid var(--border);
+border-radius:999px;
+padding:10px 18px;
+color:#c0c0c0;
+font-size:.95rem;
+}
+
+/* FOOTER */
+
 footer{
 padding:80px 0;
 text-align:center;
 color:var(--muted);
 }
+
+/* MOBILE */
 
 @media(max-width:1100px){
 
@@ -196,6 +289,49 @@ font-size:1.35rem;
 justify-content:center;
 }
 
+.experience-header{
+flex-direction:column;
+gap:8px;
+}
+
+.date{
+white-space:normal;
+}
+
+}
+
+@media(max-width:600px){
+
+.container{
+padding:30px 20px;
+}
+
+.hero h1{
+font-size:3.2rem;
+letter-spacing:-2px;
+}
+
+.hero h2{
+font-size:1.1rem;
+}
+
+.profile-wrapper{
+width:300px;
+height:300px;
+}
+
+.section{
+margin:100px auto;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+.about-card{
+padding:28px;
+}
+
 }
 
 </style>
@@ -205,26 +341,28 @@ justify-content:center;
 
 <div class="container">
 
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="hero-content">
 
 <h1>Johnnathan Luu</h1>
 
-<h2>Remote Technical Support Specialist</h2>
+<h2>Bilingual Analyst · Localization & Quality</h2>
 
 <p class="languages">
 English • Korean • Vietnamese
 </p>
 
 <p class="tagline">
-I find root causes, improve processes, and help teams solve problems at scale.
+I review, refine, and improve information so teams can deliver accurate, consistent work.
 </p>
 
 <p class="quote">
-Finding root causes.<br>
-Improving processes.<br>
-Helping teams work smarter.
+Accuracy.<br>
+Clarity.<br>
+Consistency.
 </p>
 
 <div class="hero-buttons">
@@ -260,25 +398,86 @@ class="profile-image">
 
 </section>
 
+
+<!-- ABOUT -->
+
 <section class="section">
 
 <h2 class="section-title">
 About Me
 </h2>
 
-<div class="card">
+<div class="about-card">
 
 <p>
-Born in Denver and raised across Vietnam, Korea, and the United States, I bring a multicultural perspective to technical support and operations.
+I am a bilingual analyst with experience across healthcare, multilingual communication, technical support, and operations. My work combines language accuracy with careful review, documentation, and problem solving.
 
-My background spans healthcare support, multilingual communication, process improvement, and technical troubleshooting. I enjoy investigating complex issues, identifying root causes, and creating documentation that helps teams work more effectively.
-
-Outside of work, I enjoy technology, language learning, long walks, and exploring different cultures.
+I enjoy work that requires attention to detail, independent investigation, and making information clearer and more consistent. I am particularly interested in proofreading, localization, quality assurance, terminology, and content operations.
 </p>
 
 </div>
 
 </section>
+
+
+<!-- CURRENT EXPERIENCE -->
+
+<section class="section">
+
+<h2 class="section-title">
+Current Experience
+</h2>
+
+<div class="experience">
+
+<div class="experience-header">
+
+<div>
+
+<h3>Bilingual Analyst</h3>
+
+<p class="company">
+UnitedHealthcare · Contract via Robert Half
+</p>
+
+</div>
+
+<p class="date">
+Aug 2026 – Present · Remote
+</p>
+
+</div>
+
+<ul>
+
+<li>
+Review multilingual healthcare materials for accuracy, terminology, consistency, quality, and compliance.
+</li>
+
+<li>
+Support the translation and reproduction of Annual Enrollment member communications into multiple languages and accessible formats.
+</li>
+
+<li>
+Assist with translation, editing, and coordination of member-facing healthcare communications.
+</li>
+
+<li>
+Review translated content to preserve the original meaning while maintaining natural and culturally appropriate language.
+</li>
+
+<li>
+Coordinate with external language vendors and maintain organized documentation to support timely delivery of translated materials.
+</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- SELECTED IMPACT -->
 
 <section class="section">
 
@@ -289,28 +488,43 @@ Selected Impact
 <div class="impact-grid">
 
 <div class="card">
+
 <h3>Claims System Investigation</h3>
+
 <p>
-Investigated reports of paid claims appearing as unpaid in the member portal. Traced the issue to a system discrepancy, partnered with IT to escalate findings, and helped reduce complaint volume once the issue was corrected.</p>
+Identified a system issue causing paid claims to appear unpaid to members. Confirmed the discrepancy by comparing member-facing information with internal systems, then escalated the findings to IT for resolution.
+</p>
+
 </div>
 
+
 <div class="card">
+
 <h3>Workflow Improvement</h3>
+
 <p>
-Discovered duplicate complaint email processes between departments. Helped clarify procedures and reduce confusion around complaint handling workflows.
+Identified a duplicate complaint-email process between call center agents and an internal team. Recognized the lack of visibility between the two workflows and helped clarify the process to reduce unnecessary duplication.
 </p>
+
 </div>
 
+
 <div class="card">
+
 <h3>Knowledge Sharing</h3>
+
 <p>
-Created documentation and job aids for legacy systems and became a trusted resource for teammates handling complex operational and technical cases.
+Created documentation for manually changing providers through legacy systems and regularly supported teammates who needed help interpreting job aids or resolving difficult cases.
 </p>
+
 </div>
 
 </div>
 
 </section>
+
+
+<!-- HOW I WORK -->
 
 <section class="section">
 
@@ -321,33 +535,86 @@ How I Work
 <div class="impact-grid">
 
 <div class="card">
-<h3>Problem Solving</h3>
+
+<h3>Accuracy</h3>
+
 <p>
-I enjoy investigating issues, identifying root causes, and finding practical solutions that improve systems and processes.
+I pay close attention to terminology, consistency, context, and small details that can affect the quality of information.
 </p>
+
 </div>
 
+
 <div class="card">
+
+<h3>Independent Problem Solving</h3>
+
+<p>
+I enjoy investigating issues independently, identifying what is causing a problem, and determining the most practical next step.
+</p>
+
+</div>
+
+
+<div class="card">
+
 <h3>Documentation</h3>
-<p>
-I create clear job aids, procedures, and knowledge resources that help teams work more efficiently and consistently.
-</p>
-</div>
 
-<div class="card">
-<h3>Collaboration</h3>
 <p>
-I enjoy supporting teammates, sharing knowledge, and helping others solve difficult cases when they get stuck.
+I turn complicated processes and recurring questions into clear documentation that others can use.
 </p>
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- SKILLS -->
+
+<section class="section">
+
+<h2 class="section-title">
+Focus Areas
+</h2>
+
+<div class="skills">
+
+<span class="skill">Proofreading</span>
+
+<span class="skill">Localization</span>
+
+<span class="skill">Quality Assurance</span>
+
+<span class="skill">Terminology</span>
+
+<span class="skill">Translation</span>
+
+<span class="skill">Healthcare Content</span>
+
+<span class="skill">Documentation</span>
+
+<span class="skill">Process Improvement</span>
+
+<span class="skill">Technical Troubleshooting</span>
+
+<span class="skill">Remote Collaboration</span>
+
+<span class="skill">English</span>
+
+<span class="skill">Korean</span>
+
+<span class="skill">Vietnamese</span>
+
+</div>
+
+</section>
+
+
 <footer>
 
-Johnnathan Luu • Remote Technical Support Specialist
+Johnnathan Luu · Bilingual Analyst · Localization & Quality
 
 </footer>
 
